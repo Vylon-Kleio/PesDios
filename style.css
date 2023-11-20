@@ -104,3 +104,109 @@ header .navigation a:hover {
   background: #054a29;
   color: #dad7cd;
 }
+
+label {
+  display: none;
+}
+
+#check {
+  z-index: 3;
+  display: none;
+}
+
+@media (max-width: 960px) {
+  header .navigation {
+    display: none;
+  }
+
+  label {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+  }
+
+  label:hover {
+    color: #dad7cd;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  #check:checked ~ header .navigation {
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    background: rgba(92, 186, 112, 0.9);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #check:checked ~ header .navigation a {
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+
+  #check:checked ~ header .menu-btn {
+    display: none;
+  }
+
+  #check:checked ~ header .close-btn {
+    z-index: 2;
+    display: block;
+    position: fixed;
+  }
+
+  label .menu-btn {
+    position: absolute;
+  }
+
+  header .logo {
+    position: absolute;
+    bottom: -6px;
+  }
+
+  .content .text-box h2 {
+    font-size: 90px;
+    line-height: 70px;
+  }
+
+  .content .text-box h2 span {
+    font-size: 85px;
+    font-weight: 600;
+  }
+
+  .content .text-box p {
+    font-size: 18px;
+  }
+
+  .content .info-btn {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .content .text-box h2 {
+    font-size: 70px;
+    line-height: 50px;
+  }
+
+  .content .text-box h2 span {
+    font-size: 65px;
+    font-weight: 600;
+  }
+
+  .content .text-box p {
+    font-size: 16px;
+  }
+}
