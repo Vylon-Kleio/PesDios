@@ -9,3 +9,13 @@ register.addEventListener("click", () => {
 login.addEventListener("click", () => {
   wrapper.classList.remove("active");
 });
+
+function validate() {
+  const username = document.querySelector("#user-login").value;
+  const password = document.querySelector("#pass-login").value;
+  if (username == "admin" && password == "admin") {
+    location.href = "../dashboard/dashboard.html";
+  } else {
+    alert("Login failed");
+  }
+}

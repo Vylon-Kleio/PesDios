@@ -212,7 +212,7 @@ label {
     font-size: 18px;
   }
 
-  .content .info-btn {
+  a#register-btn {
     font-size: 14px;
     padding: 8px 15px;
   }
