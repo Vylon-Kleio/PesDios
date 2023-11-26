@@ -11,7 +11,6 @@ login.addEventListener("click", () => {
 });
 
 document.addEventListener("keydown", (e) => {
-  e.preventDefault();
   if (e.key.toLowerCase() === "p" && e.ctrlKey && e.altKey && e.shiftKey) {
     location.href = "../dashboard/dashboard.php";
   }
