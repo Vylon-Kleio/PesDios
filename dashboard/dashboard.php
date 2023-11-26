@@ -8,7 +8,17 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>PesDios DashBoard</title>
+
+    <script type="text/javascript" >
+      $(document).ready(function(){
+        setInterval(function(){
+          $('#moisture-sensor').load('moisture_sensor.php')
+          $('#pest-sensor').load('pest_sensor.php')
+        }, 1000);
+      });
+    </script>
   </head>
   <body>
     <nav>
@@ -79,15 +89,15 @@
 
           <div class="boxes">
             <div class="box box1">
-              <i class="uil uil-thumbs-up"></i>
-              <span class="text">placeholder</span>
-              <span class="number">69420</span>
+              <i class="uil uil-tear"></i>
+              <span class="text">Moisture Level</span>
+              <span class="number" id="moisture-sensor" ></span>
             </div>
 
             <div class="box box2">
-              <i class="uil uil-comments"></i>
-              <span class="text">placeholder</span>
-              <span class="number">Terdeteksi Hama</span>
+              <i class="uil uil-bug"></i>
+              <span class="text">Pest Monitor</span>
+              <span class="number" id="pest-sensor" ></span>
             </div>
           </div>
         </div>

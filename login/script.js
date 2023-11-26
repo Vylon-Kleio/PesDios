@@ -13,7 +13,7 @@ login.addEventListener("click", () => {
 document.addEventListener("keydown", (e) => {
   e.preventDefault();
   if (e.key.toLowerCase() === "p" && e.ctrlKey && e.altKey && e.shiftKey) {
-    location.href = "../dashboard/dashboard.html";
+    location.href = "../dashboard/dashboard.php";
   }
 });
 
@@ -21,7 +21,7 @@ function validate() {
   const username = document.querySelector("#user-login").value;
   const password = document.querySelector("#pass-login").value;
   if (username === "admin" && password === "admin") {
-    location.href = "../dashboard/dashboard.html";
+    location.href = "../dashboard/dashboard.php";
     console.log("Login successful");
     return false;
   } else {
